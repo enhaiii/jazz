@@ -12,7 +12,9 @@ class Professions(models.Model):
         return f"{self.title}"
 
 class Workers(models.Model):
-    full_name = models.CharField('ФИО', max_length=50)
+    name = models.CharField('Имя', max_length=15, default='Null')
+    surname = models.CharField('Фамилия', max_length=15, default='Null')
+    middle_name = models.CharField('Отчество', max_length=15, default='Null')
     birthday = models.DateField('Дата рождения')
     passport = models.CharField('Паспорт', unique=True)
     id_professions = models.ForeignKey(Professions, verbose_name='Профессия', on_delete=models.CASCADE)
@@ -20,17 +22,24 @@ class Workers(models.Model):
     class Meta:
         verbose_name = "Работник"
         verbose_name_plural = "Работники"
+        ordering = ["surname", "name"]
+        indexes = [
+            models.Index(fields=["surname"])
+        ]
 
     def __str__(self):
-        return f"{self.full_name}"
-
+        return f"{self.surname} {self.name}"
     
 
 class Lives(models.Model):
+    ST = [
+        ("В эфире" , "В эфире"),
+        ("Не в эфире", "Не в эфире")
+    ]
     name = models.CharField('Название', max_length=60)
     start = models.DateTimeField('Начало')
     end = models.DateTimeField('Конец')
-    status = models.CharField('Статус', max_length=10)
+    status = models.CharField('Статус', max_length=10, choices=ST)
 
     class Meta:
         verbose_name = "Прямой эфир"
@@ -93,7 +102,9 @@ class Menu(models.Model):
 
 
 class Clients(models.Model):
-    full_name = models.CharField('ФИО', max_length=50)
+    name = models.CharField('Имя', max_length=15, default='Null')
+    surname = models.CharField('Фамилия', max_length=15, default='Null')
+    middle_name = models.CharField('Отчество', max_length=15, default='Null')
     email = models.CharField('Email', max_length=50, unique=True)
     phone_numbers = models.CharField('Номер телефона', max_length=12, unique=True)
     birthday = models.DateField('Дата рождения', blank=True)
@@ -101,9 +112,13 @@ class Clients(models.Model):
     class Meta:
         verbose_name = "Клиент"
         verbose_name_plural = "Клиенты"
+        ordering = ["surname", "name"]
+        indexes = [
+            models.Index(fields=["surname"])
+        ]
 
     def __str__(self):
-        return f"{self.full_name}"
+        return f"{self.surname} {self.name}"
 
 
 class Checks(models.Model):
