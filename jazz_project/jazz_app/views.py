@@ -3,4 +3,4 @@ from .models import *
 
 def start(request):
     context = {}
-    return render(request, 'header_footer.html', context)
+    return render(request, 'main.html', context)

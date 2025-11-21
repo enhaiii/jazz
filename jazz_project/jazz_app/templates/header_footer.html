@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style/header_footer_style.css">
     {%block style%}
-        <link rel="stylesheet" href="../static/style/header_footer_style.css">
     {%endblock%}
     <title>Document</title>
 </head>
@@ -24,7 +24,10 @@
                 </div>
             </div>
         </header>
-
+        <main>
+            {%block main%}
+            {%endblock%}
+        </main>
         <!-- FOOTER -->
         <footer>
             <div class="container">
