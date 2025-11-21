@@ -53,22 +53,60 @@ main {
 }
 
 .vinyl {
-    width: 100%;
-    height: 500px;
+    width: 1200px;
+    height: 480px;
     margin-top: 230px;
     background-image: url(../media/plate.png);
+    background-size: 1200px 480px;
 }
 
 .charming {
     font-size: 30px;
     width: 485px;
     text-align: center;
-    margin: 0;
+    padding-top: 100px;
+    margin-left: 480px ;
 }
 
 .about_us{
     margin-top: 230px;
+    margin-bottom: 230px;
 }
-/* .vinyl_record {
-    width: 990px;
-} */
+
+h1 {
+    font-size: 32px;
+    color: #7F3E28;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.boss {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+}
+
+.map {
+    width: 645px;
+    height: 527px;
+}
+
+.for_info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.info_text {
+    width: 314px;
+    height: 130px;
+    font-size: 28px;
+    color: #411F1D;
+    line-height: 40px;
+}
