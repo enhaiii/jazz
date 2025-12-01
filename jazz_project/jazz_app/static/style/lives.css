@@ -1,0 +1,69 @@
+@import "null.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap');
+
+main {
+    font-family: "Khula", sans-serif;
+    background-color: #FFF1DE;
+}
+
+.container {
+    width: 990px;
+    margin: 0 auto;
+}
+
+.padding {
+    padding: 300px 0px 0px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 300px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 325px;
+    height: 93px;
+    background-color: #E6A040;
+    border-radius: 30px;
+    padding-top: 1px;
+    margin-bottom: 40px;
+}
+
+.text_button {
+    font-size: 32px;
+    color: #FFF1DE !important;
+    font-weight: 700;
+    text-align: center;
+}
+
+.text_direction {
+    color: black;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 60px;
+}
+
+.text_container_direction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gold_star {
+    width: 59px;
+    height: 65px;
+    margin: 0px 40px;
+}
+
+.direction {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -8,3 +8,7 @@ def start(request):
 def event(request):
     context = {}
     return render(request, 'events.html', context)
+
+def online(request):
+    context = {}
+    return render(request, 'lives.html', context)
