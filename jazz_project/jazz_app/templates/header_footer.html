@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style/header_footer_style.css">
+    {%block style%}
+    {%endblock%}
+    <title>Document</title>
+</head>
+<body>
+    <div class="boss_hf">
+        <header>
+            <div class="container">
+                <div class="container_header">
+                    <a href="events/"><p class="text">Events</p></a>
+                    <a href="#"><p class="text">Lives</p></a>
+                    <a href="main/"><img src="../static/media/Soft Star.png" alt="star"></a>
+                    <a href="#"><p class="text">Menu</p></a>
+                    <a href="#"><p class="text">Profile</p></a>
+                </div>
+            </div>
+        </header>
+        <main>
+            {%block main%}
+            {%endblock%}
+        </main>
+        <!-- FOOTER -->
+        <footer>
+            <div class="container">
+                <div class="container_footer">
+                    <div class="column">
+                        <a href="#"><p class="text_footer">Home</p></a>
+                        <a href="#"><p class="text_footer">Events</p></a>
+                        <a href="#"><p class="text_footer">Lives</p></a>
+                        <a href="#"><p class="text_footer">Menu</p></a>
+                        <a href="#"><p class="text_footer">Profile</p></a>
+                        <a href="#"><p class="text_footer">Map</p></a>
+                    </div>
+                    <div class="column1">
+                        <a href="#"><p class="text_footer">Help:</p></a>
+                        <a href="#"><p class="text_footer">Map</p></a>
+                        <a href="#"><p class="text_footer">About us</p></a>
+                        <p class="text_footer">+33140264660</p>
+                    </div>
+                    <div class="column2">
+                        <div class="reviews">
+                            <p class="text_footer">Read reviews</p>
+                            <img src="../static/media/arrowFooter.png" alt="arrow" class="arrow_footer">
+                        </div>
+                        <div class="score">
+                            <p class="text_footer">4.9</p>
+                            <img src="../static/media/stars5.png" alt="stars 5" class="stars">
+                        </div>
+                        <img src="../static/media/logotip.png" alt="logotip" class="logotip">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

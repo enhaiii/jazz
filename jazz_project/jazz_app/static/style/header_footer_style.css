@@ -1,0 +1,119 @@
+@import "null.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap');
+
+body {
+    font-family: "Khula", sans-serif;
+    background-color: #FFF1DE;
+}
+
+header {
+    background-color: #e6a040;
+    position: fixed;
+    width: 100%;
+    padding: 47px 0px;
+    border-bottom-left-radius: 54px; 
+    border-bottom-right-radius: 54px;
+    z-index: 1;
+}
+
+.boss_hf {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    width: 990px;
+    margin: 0 auto;
+}
+
+.container_header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text {
+    font-size: 32px;
+    color: #7F3E28;
+    font-weight: 700;
+}
+
+footer {
+    width: 100%;
+    padding: 83px 170px;
+    background-color: #e6a040;
+    border-top-left-radius: 54px; 
+    border-top-right-radius: 54px;
+    margin-top: auto;
+}
+
+
+.container_footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.column {
+    display: flex;
+    flex-direction: column;
+    width: 71.33px;
+    height: 250px;
+    justify-content: space-around;
+}
+
+.text_footer {
+    color: #FFF1DE;
+    font-size: 25px;
+}
+
+.column1 {
+    display: flex;
+    flex-direction: column;
+    width: 170px;
+    height: 170px;
+    justify-content: space-around;
+}
+
+.column2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 235px;
+    height: 296px;
+}
+
+.reviews {
+    display: flex;
+    width: 200px;
+    height: 34px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.arrow_footer {
+    width: 34px;
+    height: 34px;
+}
+
+.score {
+    display: flex;
+    width: 200px;
+    height: 34px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.stars {
+    width: 165px;
+    height: 33px;
+}
+
+.logotip {
+    width: 234px;
+    height: 163px;
+}

@@ -1,0 +1,156 @@
+@import "null.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap');
+
+main {
+    font-family: "Khula", sans-serif;
+    background-color: #FFF1DE;
+}
+
+.container {
+    width: 990px;
+    margin: 0 auto;
+}
+
+.padding {
+    padding: 230px 0px 0px;
+}
+
+.text_in_img {
+    font-size: 30px;
+    color: #401E1C;
+    width: 424px;
+    height: 171px;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 200px;
+    margin-left: 500px;
+}
+
+.text_in_img2 {
+    font-size: 30px;
+    color: #401E1C;
+    width: 424px;
+    height: 171px;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 340px;
+    margin-left: 670px;
+}
+
+.description{
+    width: 1200px;
+    height: 1000px;
+    background-image: url(../media/img.png);
+    background-size: 1185px 1000px; 
+    background-repeat: no-repeat;
+}
+
+option {
+    font-size: 25px;
+    width: 100px;
+    height: 30px;
+    background-color: #e6a040;
+    color: #FFF1DE;
+    padding: 5px;
+    
+}
+
+#town {
+    font-size: 25px;
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #e6a040;
+    color: #FFF1DE;
+    padding: 5px;
+}
+
+.search {
+    font-size: 25px;
+    padding: 5px;
+    border-radius: 5px;
+    width: 300px;
+    height: 42px;
+    color: #401E1C;
+}
+
+.colored-select option:checked {
+  background-color: #e6a040 !important;
+  color: #FFF1DE !important;
+}
+
+.colored-select option:selected {
+  background-color: #401E1C !important;
+  color: #FFF1DE !important;
+}
+
+.for_search {
+    display: flex;
+    width: 460px;
+    justify-content: space-between;
+    margin-bottom: 100px;
+}
+
+.events {
+    margin-top: 230px;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 288px;
+    height: 647px;
+    background-color: #ffffff;
+    border-radius: 30px;
+}
+
+.card {
+    width: 265px;
+    height: 405px;
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+.name_event {
+    font-size: 22px;
+    color: black;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.container_event_direction {
+    margin-bottom: 20px;
+}
+
+.text_event {
+    font-size: 20px;
+    color: black;
+    line-height: 30px;
+}
+
+.cards_events {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    justify-items: start;
+}
+
+.button_text {
+    font-size: 20px;
+    color: #FFF1DE !important;
+    font-weight: 700;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 91px;
+    height: 45px;
+    background: #e6a040;
+    border-radius: 30px;
+}

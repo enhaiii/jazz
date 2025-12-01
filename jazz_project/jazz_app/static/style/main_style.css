@@ -1,0 +1,118 @@
+@import "null.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap');
+
+main {
+    font-family: "Khula", sans-serif;
+    background-color: #FFF1DE;
+}
+
+.container {
+    width: 990px;
+    margin: 0 auto;
+}
+
+.welcome {
+    display: flex;
+    width: 100%;
+}
+
+.padding {
+    padding: 230px 0px 0px;
+}
+
+.jazz_base {
+    width: 315px;
+    height: 480px;
+}
+
+.logotip {
+    width: 235px;
+    height: 164px;
+    margin-bottom: 17px;
+}
+
+.description{
+    display: flex;
+    width: 535px;
+    height: 350px;
+    flex-direction: column;
+    margin-left: 33px;
+}
+
+.description_jazz_club{
+    font-size: 25px;
+    width: 535px;
+    font-weight: 700;
+    color: #401E1C;
+    line-height: 40px;
+}
+
+.foto {
+    width: 990px;
+}
+
+.vinyl {
+    width: 1200px;
+    height: 480px;
+    margin-top: 230px;
+    background-image: url(../media/plate.png);
+    background-size: 1200px 480px;
+}
+
+.charming {
+    font-size: 30px;
+    width: 485px;
+    text-align: center;
+    padding-top: 100px;
+    margin-left: 480px ;
+}
+
+.about_us{
+    margin-top: 230px;
+    margin-bottom: 230px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #7F3E28;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.boss {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    height: 527px;
+    background-image: url(../media/line.png);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+}
+
+.map {
+    position: relative;
+    z-index: 0;
+    width: 645px;
+    height: 527px;
+}
+
+.for_info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.info_text {
+    width: 314px;
+    height: 130px;
+    font-size: 28px;
+    color: #411F1D;
+    line-height: 40px;
+}
