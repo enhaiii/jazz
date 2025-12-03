@@ -12,3 +12,7 @@ def event(request):
 def online(request):
     context = {}
     return render(request, 'lives.html', context)
+
+def live(request):
+    context = {}
+    return render(request, 'in_lives.html', context)

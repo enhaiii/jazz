@@ -63,6 +63,9 @@ class Events(models.Model):
     dress = models.CharField('Dress code', max_length=90, default="No dress code", choices=ST)
     price = models.DecimalField('Price', max_digits=20, decimal_places=2, default=100)
     type = models.CharField('Type', max_length=50)
+    artists_img = models.ImageField(upload_to='Jazz_events/', verbose_name='Artists', default=None)
+    artists_name = models.CharField('Star name', max_length=50, default='Name')
+    discription = models.CharField('Description', max_length=200, default=None)
     id_lives = models.ForeignKey(Lives, verbose_name='Live from the event', null=True, on_delete=models.CASCADE)
 
     class Meta:
