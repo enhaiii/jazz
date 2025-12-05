@@ -70,8 +70,8 @@ option {
     font-size: 25px;
     padding: 5px;
     border-radius: 5px;
-    width: 300px;
-    height: 42px;
+    width: 260px;
+    height: 40px;
     color: #401E1C;
 }
 
@@ -85,11 +85,27 @@ option {
   color: #FFF1DE !important;
 }
 
+.string {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 320px;
+    height: 43px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 10px;
+}
+
 .for_search {
     display: flex;
     width: 460px;
     justify-content: space-between;
     margin-bottom: 100px;
+}
+
+.lupa {
+    width: 30px;
+    background-color: #ffffffff;
 }
 
 .events {

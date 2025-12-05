@@ -30,10 +30,21 @@ main {
     align-items: center;
     width: 325px;
     height: 93px;
-    background-color: #E6A040;
+    background-color: #7F3E28;
     border-radius: 30px;
     padding-top: 1px;
     margin-bottom: 40px;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:hover {
+    background-color: #e6a040;
+}
+
+.button.active:hover {
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
 }
 
 .text_button {

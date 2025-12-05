@@ -37,8 +37,45 @@ header {
 
 .text {
     font-size: 32px;
+    cursor: pointer;
     color: #7F3E28;
     font-weight: 700;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text:hover {
+    color: #FFF1DE;
+}
+
+.text.active {
+    color: #FFF1DE !important;
+    transition: color 0.7s ease-out;
+}
+
+.text.active:hover {
+    color: #FFF1DE !important;
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+.text:focus{
+    color: #FFF1DE !important;
+    outline: none;
+}
+
+.star {
+    width: 62px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: filter 0.3s;
+}
+
+.star:hover {
+    filter: 
+        brightness(6.0)
+        sepia(0.3)
+        hue-rotate(-60deg)
+        saturate(5.4)
+        contrast(0.95);
 }
 
 footer {
