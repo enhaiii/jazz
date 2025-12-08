@@ -15,9 +15,9 @@ class Workers(models.Model):
     name = models.CharField('Name', max_length=15, default='Null')
     surname = models.CharField('Surname', max_length=15, default='Null')
     middle_name = models.CharField('Middle name', max_length=15, default='Null')
-    birthday = models.DateField('Иirthday')
+    birthday = models.DateField('Birthday')
     passport = models.CharField('Passport', unique=True)
-    id_professions = models.ForeignKey(Professions, verbose_name='Profession', on_delete=models.CASCADE)
+    profession_id = models.ForeignKey(Professions, verbose_name='Profession', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "Worker"
@@ -66,7 +66,8 @@ class Events(models.Model):
     artists_img = models.ImageField(upload_to='Jazz_events/', verbose_name='Artists', default=None)
     artists_name = models.CharField('Star name', max_length=50, default='Name')
     discription = models.CharField('Description', max_length=200, default=None)
-    id_lives = models.ForeignKey(Lives, verbose_name='Live from the event', null=True, on_delete=models.CASCADE)
+    live_id = models.ForeignKey(Lives, verbose_name='Live from the event', null=True, on_delete=models.CASCADE)
+    workers = models.ManyToManyField('Workers')
 
     class Meta:
         verbose_name = "Event"
@@ -74,18 +75,6 @@ class Events(models.Model):
 
     def __str__(self):
         return f"{self.title}"
-
-
-class Work_Events(models.Model):
-    id_workers = models.ForeignKey(Workers, verbose_name='Worker', on_delete=models.CASCADE)
-    id_events = models.ForeignKey(Events, verbose_name='Event', on_delete=models.CASCADE)
-
-    class Meta:
-        verbose_name = "Worker at an event"
-        verbose_name_plural = "Workers at events"
-
-    def __str__(self):
-        return f"{self.id}"
 
 
 class Dishes(models.Model):
@@ -103,7 +92,7 @@ class Dishes(models.Model):
 
 class Menu(models.Model):
     categories = models.CharField('Categories', max_length=20)
-    id_dishes = models.ForeignKey(Dishes, verbose_name='Dish', on_delete=models.CASCADE)
+    dish_id = models.ForeignKey(Dishes, verbose_name='Dish', on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = "Menu"
@@ -120,6 +109,7 @@ class Clients(models.Model):
     email = models.CharField('Email', max_length=50, unique=True)
     phone_numbers = models.CharField('Phone number', max_length=12, unique=True)
     birthday = models.DateField('Birthday', blank=True)
+    events = models.ManyToManyField('Events')
 
     class Meta:
         verbose_name = "Client"
@@ -137,8 +127,9 @@ class Checks(models.Model):
     price = models.DecimalField('Price', max_digits=20, decimal_places=2)
     date = models.DateTimeField('Date', auto_now_add=True)
     payment_method = models.CharField('Payment method', max_length=10)
-    id_clients = models.ForeignKey(Clients, verbose_name='Client', on_delete=models.CASCADE)
-    id_workers = models.ForeignKey(Workers, verbose_name='Worker', on_delete=models.CASCADE)
+    client_id = models.ForeignKey(Clients, verbose_name='Client', on_delete=models.CASCADE)
+    worker_id = models.ForeignKey(Workers, verbose_name='Worker', on_delete=models.CASCADE)
+    dishes = models.ManyToManyField('Dishes')
 
     class Meta:
         verbose_name = "Check"
@@ -146,28 +137,3 @@ class Checks(models.Model):
 
     def __str__(self):
         return f"{self.id}"
-
-
-class Guests(models.Model):
-    id_clients = models.ForeignKey(Clients, verbose_name='Client', on_delete=models.CASCADE)
-    id_events = models.ForeignKey(Events, verbose_name='Events', on_delete=models.CASCADE)
-
-    class Meta:
-        verbose_name = "Guest"
-        verbose_name_plural = "Guests"
-
-    def __str__(self):
-        return f"{self.id}"
-
-
-class Dishes_Checks(models.Model):
-    count = models.IntegerField(verbose_name='Count')
-    id_dishes = models.ForeignKey(Dishes, verbose_name='Dish', on_delete=models.CASCADE)
-    id_checks = models.ForeignKey(Checks, verbose_name='Check', on_delete=models.CASCADE)
-
-    class Meta:
-        verbose_name = "Dish on the check"
-        verbose_name_plural = "Dishes in checks"
-
-    def __str__(self):
-        return f"{self.count}"
