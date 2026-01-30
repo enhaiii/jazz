@@ -1,0 +1,18 @@
+@import "null.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap');
+
+main {
+    font-family: "Khula", sans-serif;
+    background-color: #FFF1DE;
+}
+
+.container {
+    width: 990px;
+    margin: 0 auto;
+}
+
+.padding {
+    padding: 300px 0px 0px;
+}
+

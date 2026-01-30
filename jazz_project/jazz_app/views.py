@@ -16,3 +16,7 @@ def online(request):
 def live(request):
     context = {}
     return render(request, 'in_lives.html', context)
+
+def formenu(request):
+    context = {}
+    return render(request, 'menu.html', context)
