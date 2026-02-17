@@ -20,3 +20,7 @@ def live(request):
 def formenu(request):
     context = {}
     return render(request, 'menu.html', context)
+
+def forprofile(request):
+    context = {}
+    return render(request, 'profile.html', context)
