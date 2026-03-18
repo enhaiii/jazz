@@ -72,6 +72,49 @@ body {
 
 .for_check {
     display: flex;
-    width: 152px;
+    justify-content: space-between;
+    align-items: center;
+    width: 147px;
     height: 25px;
+    margin-top: 6px;
+}
+
+.hidden-checkbox {
+  position: absolute;
+  left: -9999px;
+}
+
+.round-checkbox {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #7F3E28;
+  background-color: #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.round-checkbox::after {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.hidden-checkbox:checked + .round-checkbox {
+  background-color: #7F3E28;
+}
+
+.hidden-checkbox:checked + .round-checkbox::after {
+  display: block;
+}
+
+.keep_me {
+    font-size: 14px;
 }
