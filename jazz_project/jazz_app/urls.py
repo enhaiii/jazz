@@ -8,5 +8,7 @@ urlpatterns = [
     path('lives/', views.online),
     path('in_live/', views.live),
     path('menu/', views.formenu),
-    path('profile/', views.forprofile),
+    path('login/', views.forlogin),
+    path('logup/', views.forlogup),
+    path('profile/', views.profile),
 ]

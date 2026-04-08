@@ -1,36 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../static/style/profile.css">
-</head>
-<body>
-    <main>
-        <div class="container">
-            <img src="../static/media/arrow_menu.png" alt="arrow back" class="arrow_back">
-            <div class="sign">
-                <div class="for_sign">
-                    <p class="in">Sign in</p>
-                    <p class="up">Sign up</p>
-                </div>
-                <div class="form_autentification">
-                    <p class="caption_name">User name</p>
-                    <input type="text" name="name" id="name">
-                    <p class="caption_name">Email</p>
-                    <input type="text" name="name" id="name">
-                    <p class="caption_name">Password</p>
-                    <input type="text" name="name" id="name">
-                    <div class="for_check">
-                        <input type="checkbox" id="roundCheckbox" class="hidden-checkbox">
-                        <label for="roundCheckbox" class="round-checkbox"></label>
-                        <p class="keep_me">Keep me Signed in</p>
-                    </div>
-                </div>
-            </div>
-            <img src="../static/media/arrow_menu.png" alt="arrow next" class="arrow_next">
+{% extends "header_footer.html" %}
+{%block style%}
+<link rel="stylesheet" href="../static/style/profile.css">
+{%endblock%}
+{%block main%}
+<div class="container">
+    <div class="content">
+        <div class="for_avatar">
+            <img src="../static/media/changePhoto.svg" alt="" class="photoCamera">
         </div>
-    </main>
-</body>
-</html>
+    </div>
+</div>
+{%endblock%}

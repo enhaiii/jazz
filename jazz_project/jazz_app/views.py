@@ -21,6 +21,14 @@ def formenu(request):
     context = {}
     return render(request, 'menu.html', context)
 
-def forprofile(request):
+def forlogin(request):
+    context = {}
+    return render(request, 'login.html', context)
+
+def forlogup(request):
+    context = {}
+    return render(request, 'logup.html', context)
+
+def profile(request):
     context = {}
     return render(request, 'profile.html', context)
