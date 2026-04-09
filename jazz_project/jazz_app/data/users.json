@@ -1,0 +1,11 @@
+[
+    {
+        "id": "1",
+        "full_name": "Максим",
+        "password": "qaz4wsx!9",
+        "email": "maksim@gmail.com",
+        "avatar": "./static/media/maksim.svg",
+        "phone_number": ,
+        "birthday": 
+    }
+]

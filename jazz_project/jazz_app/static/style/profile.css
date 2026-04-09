@@ -13,14 +13,67 @@ body {
 }
 
 .content {
-    margin-top: 170px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .for_avatar {
-    background-image: url(..media/avatar.svg);
+    background-image: url(/static/media/avatar.svg);
+    background-repeat: no-repeat;
     background-size: 200px 200px;
+    width: 200px;
+    height: 200px;
+    padding: 150px 20px 0px 130px;
+    background-color: none;
+    margin-bottom: 15px;
+}
+
+.forCamera {
+    background-color: transparent;
 }
 
 .photoCamera {
-    
+    width: 50px;
+}
+
+h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #401E1C;
+    margin-bottom: 25px;
+}
+
+input {
+    background-color: rgba(127, 62, 40, 0);
+    border: 2px solid #7F3E28;
+    border-radius: 30px;
+    width: 280px;
+    height: 30px;
+    padding: 10px 10px 6px 20px;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.for_all_input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 290px;
+}
+
+.logout {
+    color: #401E1C !important;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E6A040;
+    font-size: 20px;
+    font-weight: 600;
+    width: 100px;
+    height: 35px;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
